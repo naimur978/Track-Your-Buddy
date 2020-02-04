@@ -31,7 +31,7 @@
             android:value="@integer/google_play_services_version"/>
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyAmwi-6INKXHQlOQllhWH7xlATGEXTcSrI"/>
+            android:value="AIzaSyCIWzNc4FeCD1GG1QObhWWBd7og5aZq49I"/>
 
         <activity android:name=".activity.FriendLocationActivity">
         </activity>
