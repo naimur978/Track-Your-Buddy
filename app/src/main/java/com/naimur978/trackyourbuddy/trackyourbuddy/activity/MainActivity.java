@@ -23,10 +23,15 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.gauravk.bubblenavigation.BubbleNavigationLinearView;
+import com.gauravk.bubblenavigation.listener.BubbleNavigationChangeListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.HomeFragmentA;
+import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.MainActivityA;
+import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.StarredFragmentA;
 import com.naimur978.trackyourbuddy.trackyourbuddy.R;
 import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.FriendsFragment;
 import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.HomeFragment;
@@ -70,11 +75,16 @@ public class MainActivity extends AppCompatActivity {
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
+    Fragment selectedFragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        BubbleNavigationLinearView bubbleNavigation = findViewById(R.id.bubbleNavigation);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new HomeFragment()).commit();
 
         mPref = getApplicationContext().getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         mEditor = mPref.edit();
@@ -93,34 +103,60 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mHandler = new Handler();
+   /*     mHandler = new Handler();
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);*/
 
         // Navigation view header
-        navHeader = navigationView.getHeaderView(0);
+      /*  navHeader = navigationView.getHeaderView(0);
         textName = (TextView) navHeader.findViewById(R.id.nav_header_name);
         textMobileNo = (TextView) navHeader.findViewById(R.id.nav_header_mobile_no);
-
+*/
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
 
         // load nav menu header data
-        loadNavHeader();
+        //loadNavHeader();
 
         // initializing navigation menu
-        setUpNavigationView();
+       // setUpNavigationView();
 
         if (savedInstanceState == null) {
             navItemIndex = 0;
             CURRENT_TAG = TAG_HOME;
-            loadHomeFragment();
+           // loadHomeFragment();
         }
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestLocationPermission();
         }
+
+        bubbleNavigation.setNavigationChangeListener(new BubbleNavigationChangeListener() {
+            @Override
+            public void onNavigationChanged(View view, int position) {
+                switch (position){
+                    default:
+                        selectedFragment = new HomeFragment();
+                        break;
+                    case 0:
+                        selectedFragment = new HomeFragment();
+                        break;
+                    case 1:
+                        selectedFragment = new FriendsFragment();
+                        break;
+                    case 2:
+                        selectedFragment = new StarredFragmentA();
+                        break;
+                    case 3:
+                        selectedFragment = new HomeFragmentA();
+                        break;
+
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        selectedFragment).commit();
+            }
+        });
     }
 
     private void requestLocationPermission() {
@@ -197,12 +233,12 @@ public class MainActivity extends AppCompatActivity {
      * Returns respected fragment that user
      * selected from navigation menu
      */
-    private void loadHomeFragment() {
+   /* private void loadHomeFragment() {
         // selecting appropriate nav menu item
-        selectNavMenu();
+       // selectNavMenu();
 
         // set toolbar title
-        setToolbarTitle();
+        //setToolbarTitle();
 
         // if user select the current navigation menu again, don't do anything
         // just close the navigation drawer
@@ -238,9 +274,9 @@ public class MainActivity extends AppCompatActivity {
 
         // refresh toolbar menu
         invalidateOptionsMenu();
-    }
+    }*/
 
-    private Fragment getHomeFragment() {
+    /*private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
                 // home
@@ -251,18 +287,20 @@ public class MainActivity extends AppCompatActivity {
                 FriendsFragment friendsFragment = new FriendsFragment();
                 return friendsFragment;
 
-
-
-
-
             case 2:
+                // photos
+                startActivity(new Intent(this, MainActivityA.class));
+
+
+
+            case 3:
                 // movies fragment
                 InviteFragment inviteFragment = new InviteFragment();
                 return inviteFragment;
             default:
                 return new HomeFragment();
         }
-    }
+    }*/
 
 
     private void setToolbarTitle() {
@@ -319,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 menuItem.setChecked(true);
 
-                loadHomeFragment();
+               // loadHomeFragment();
 
                 return true;
             }
@@ -363,7 +401,7 @@ public class MainActivity extends AppCompatActivity {
             if (navItemIndex != 0) {
                 navItemIndex = 0;
                 CURRENT_TAG = TAG_HOME;
-                loadHomeFragment();
+               // loadHomeFragment();
                 return;
             }
         }

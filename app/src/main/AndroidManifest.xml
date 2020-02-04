@@ -37,6 +37,8 @@
         </activity>
         <activity android:name=".activity.AllFriendsLocationActivity">
         </activity>
+        <!--<activity android:name=".CustomNavigation.MainActivityA"></activity>-->
+
     </application>
 
 

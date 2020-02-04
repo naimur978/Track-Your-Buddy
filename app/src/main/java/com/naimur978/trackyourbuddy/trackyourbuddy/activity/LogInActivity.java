@@ -17,6 +17,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.MainActivityA;
 import com.naimur978.trackyourbuddy.trackyourbuddy.R;
 
 
@@ -85,7 +86,7 @@ public class LogInActivity extends AppCompatActivity {
                                         mEditor.putString(IS_LOGIN, "true");
                                         mEditor.commit();
                                         Toast.makeText(LogInActivity.this, "Logged in", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LogInActivity.this,MainActivity.class));
+                                        startActivity(new Intent(LogInActivity.this, MainActivityA.class));
                                         finish();
                                     }
                                     if(mProgressDialog != null)
