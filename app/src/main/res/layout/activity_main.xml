@@ -44,15 +44,7 @@
 
 
 
-        <com.gauravk.bubblenavigation.BubbleToggleView
-            android:id="@+id/profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            app:bt_colorActive="@color/green"
-            app:bt_colorInactive="#000000"
-            app:bt_icon="@drawable/ic_stara"
-            app:bt_title="Profile" />
+
 
     </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
 
