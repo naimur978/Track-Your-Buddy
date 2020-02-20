@@ -2,8 +2,7 @@
 
 <h1> Login Page </h1>  
 
-<img src="images/login.jpg" alt="alt text" width="100" height="100">
-![SnapShot](images/login.jpg)
+<img src="images/login.jpg" alt="SnapShot" width="100" height="200">  
 
 
 <h1> User's Home Page </h1>  
