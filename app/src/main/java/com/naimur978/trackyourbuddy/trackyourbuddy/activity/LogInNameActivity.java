@@ -21,7 +21,7 @@ import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.MainActivity
 import com.naimur978.trackyourbuddy.trackyourbuddy.R;
 
 
-public class LogInActivity extends AppCompatActivity {
+public class LogInNameActivity extends AppCompatActivity {
 
     int PRIVATE_MODE = 0;
     public static final String PREF_NAME = "LOCA";
@@ -53,7 +53,7 @@ public class LogInActivity extends AppCompatActivity {
         mNameEditText = (TextInputEditText) findViewById(R.id.edit_text_name);
         mSignUpButton = (Button) findViewById(R.id.sign_up_button);
         mSignInButton = (Button) findViewById(R.id.sign_in_button);
-        mProgressDialog = new ProgressDialog(LogInActivity.this);
+        mProgressDialog = new ProgressDialog(LogInNameActivity.this);
         mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 
         mSignUpButton.setOnClickListener(new View.OnClickListener() {
@@ -85,8 +85,8 @@ public class LogInActivity extends AppCompatActivity {
                                         mEditor.putString(KEY_NAME,name);
                                         mEditor.putString(IS_LOGIN, "true");
                                         mEditor.commit();
-                                        Toast.makeText(LogInActivity.this, "Logged in", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LogInActivity.this, MainActivityA.class));
+                                        Toast.makeText(LogInNameActivity.this, "Logged in", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(LogInNameActivity.this, MainActivityA.class));
                                         finish();
                                     }
                                     if(mProgressDialog != null)
@@ -129,8 +129,8 @@ public class LogInActivity extends AppCompatActivity {
                                         mEditor.putString(KEY_NAME,name);
                                         mEditor.putString(IS_LOGIN, "true");
                                         mEditor.commit();
-                                        Toast.makeText(LogInActivity.this, "Signed in", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(LogInActivity.this,MainActivity.class));
+                                        Toast.makeText(LogInNameActivity.this, "Signed in", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(LogInNameActivity.this,MainActivity.class));
                                         finish();
                                     }
                                     if(mProgressDialog != null)

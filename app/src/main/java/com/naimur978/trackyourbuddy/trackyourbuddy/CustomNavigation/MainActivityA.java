@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.gauravk.bubblenavigation.BubbleNavigationLinearView;
 import com.gauravk.bubblenavigation.listener.BubbleNavigationChangeListener;
 import com.naimur978.trackyourbuddy.trackyourbuddy.R;
-import com.naimur978.trackyourbuddy.trackyourbuddy.activity.LogInActivity;
+import com.naimur978.trackyourbuddy.trackyourbuddy.activity.LogInNameActivity;
 import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.FriendsFragment;
 import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.HomeFragment;
 
@@ -40,7 +40,7 @@ public class MainActivityA extends AppCompatActivity {
         String isLoggedIn = mPref.getString(IS_LOGIN, null);
 
         if (isLoggedIn == null) {
-            startActivity(new Intent(this, LogInActivity.class));
+            startActivity(new Intent(this, LogInNameActivity.class));
             finish();
         }
 

@@ -28,7 +28,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 
-
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
     implementation 'com.google.firebase:firebase-storage:19.1.0'
@@ -43,7 +42,6 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui:1.0.1'
     //noinspection GradleCompatible
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-
 
 
     implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'

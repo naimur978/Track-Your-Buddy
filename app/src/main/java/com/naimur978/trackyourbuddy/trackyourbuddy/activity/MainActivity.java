@@ -21,7 +21,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.gauravk.bubblenavigation.BubbleNavigationLinearView;
 import com.gauravk.bubblenavigation.listener.BubbleNavigationChangeListener;
@@ -30,12 +29,10 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.HomeFragmentA;
-import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.MainActivityA;
 import com.naimur978.trackyourbuddy.trackyourbuddy.CustomNavigation.StarredFragmentA;
 import com.naimur978.trackyourbuddy.trackyourbuddy.R;
 import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.FriendsFragment;
 import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.HomeFragment;
-import com.naimur978.trackyourbuddy.trackyourbuddy.fragment.InviteFragment;
 import com.naimur978.trackyourbuddy.trackyourbuddy.other.Utils;
 
 
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         String isLoggedIn = mPref.getString(IS_LOGIN, null);
 
         if (isLoggedIn == null) {
-            startActivity(new Intent(this, LogInActivity.class));
+            startActivity(new Intent(this, LogInNameActivity.class));
             finish();
         } else {
             //mTextView.setText(mPref.getString(KEY_MOBILE_NUMBER, null));
@@ -183,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == 1) {
             if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Granted", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Granted", Toast.LENGTH_SHORT).show();
                 recreate();
             } else {
                 Toast.makeText(this, "Denied", Toast.LENGTH_SHORT).show();
@@ -210,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_item_log_out:
                 mEditor.clear();
                 mEditor.commit();
-                startActivity(new Intent(MainActivity.this, LogInActivity.class));
+                startActivity(new Intent(MainActivity.this, LogInNameActivity.class));
                 finish();
                 return true;
             default:
@@ -342,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_log_out:
                         mEditor.clear();
                         mEditor.commit();
-                        startActivity(new Intent(MainActivity.this, LogInActivity.class));
+                        startActivity(new Intent(MainActivity.this, LogInNameActivity.class));
                         finish();
                         return true;
                     default:
