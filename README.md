@@ -3,7 +3,7 @@
 <h1> Login Page </h1>  
 
 
-![SnapShot](images/login.jpg)
+![SnapShot](images/login.jpg | width=100)
 
 
 <h1> User's Home Page </h1>  
