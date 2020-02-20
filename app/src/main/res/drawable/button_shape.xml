@@ -13,6 +13,9 @@
         android:top="1dp"
         android:bottom="1dp"/>
 
-    <solid android:color="#505050"/>
+    <solid
+        android:startColor="#20002c"
+        android:endColor="#cbb4d4"
+        />
 
 </shape>
