@@ -2,7 +2,7 @@
 
 <h1> Login Page </h1>  
 
-<img src="images/login.jpg" alt="SnapShot" width="100" height="200">  
+<img src="images/login.jpg" alt="SnapShot" width="300" height="600">  
 
 
 <h1> User's Home Page </h1>  
