@@ -1,8 +1,10 @@
 # Track-Your-Buddy
 
+Download Link: https://drive.google.com/file/d/1HxqXvIFToz-Fr4gdGkqpC3cKtrGbI-3a/view?usp=sharing
+
 <h1> Login Page </h1>  
 
-<img src="images/login.jpg" alt="SnapShot" width="300" height="600">  
+<center><img src="images/login.jpg" alt="SnapShot" width="300" height="600"></center>  
 
 
 <h1> User's Home Page </h1>  
