@@ -4,10 +4,10 @@ Download Link: https://drive.google.com/file/d/1HxqXvIFToz-Fr4gdGkqpC3cKtrGbI-3a
 
 
 
-<p align="center">
-  <h1> Login Page </h1>  
 
-<img src="images/login.jpg" alt="SnapShot" width="300" height="600">
+<h1> Login Page </h1>  
+
+<img align="center" src="images/login.jpg" alt="SnapShot" width="300" height="600">
 
 
 <h1> User's Home Page </h1>  
@@ -26,5 +26,4 @@ Download Link: https://drive.google.com/file/d/1HxqXvIFToz-Fr4gdGkqpC3cKtrGbI-3a
   
 <img src="images/all_friends_location.jpg" alt="SnapShot" width="300" height="600">
 
-</p>
 
