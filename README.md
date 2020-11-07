@@ -5,13 +5,7 @@ Download Link: https://drive.google.com/file/d/1HxqXvIFToz-Fr4gdGkqpC3cKtrGbI-3a
 
 
 <p align="center">
-  <img src="images/login.jpg" alt="SnapShot" width="300" height="600/>
-  <img src="images/user's_location.jpg" alt="SnapShot" width="300" height="600/>
-  <img src="images/user's_contact.jpg" alt="SnapShot" width="300" height="600/>
-  <img src="images/all_friends_location.jpg" alt="SnapShot" width="300" height="600/>
-</p>
-
-<h1> Login Page </h1>  
+  <h1> Login Page </h1>  
 
 <img src="images/login.jpg" alt="SnapShot" width="300" height="600">
 
@@ -31,3 +25,6 @@ Download Link: https://drive.google.com/file/d/1HxqXvIFToz-Fr4gdGkqpC3cKtrGbI-3a
 
   
 <img src="images/all_friends_location.jpg" alt="SnapShot" width="300" height="600">
+
+</p>
+
