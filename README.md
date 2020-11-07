@@ -7,7 +7,9 @@ Download Link: https://drive.google.com/file/d/1HxqXvIFToz-Fr4gdGkqpC3cKtrGbI-3a
 
 <h1> Login Page </h1>  
 
-<img align="center" src="images/login.jpg" alt="SnapShot" width="300" height="600">
+<p align="center">
+  <img src="images/login.jpg" alt="SnapShot" width="300" height="600">
+</p>
 
 
 <h1> User's Home Page </h1>  
