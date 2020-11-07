@@ -12,7 +12,7 @@
     <application
         android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_location"
+        android:icon="@mipmap/ic_location"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

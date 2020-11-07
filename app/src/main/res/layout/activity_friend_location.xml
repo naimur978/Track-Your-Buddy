@@ -59,7 +59,7 @@
         </LinearLayout>
 
         <Button
-            android:background="@drawable/ic_location"
+            android:background="@mipmap/ic_location"
             android:id="@+id/button_location"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
